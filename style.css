@@ -1,21 +1,42 @@
 @font-face {
     font-family: 'Geist';
-    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.1/files/geist-sans-latin-400-normal.woff2') format('woff2');
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-300-normal.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-400-normal.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geist';
-    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.1/files/geist-sans-latin-500-normal.woff2') format('woff2');
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-500-normal.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geist';
-    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.1/files/geist-sans-latin-700-normal.woff2') format('woff2');
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-600-normal.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-700-normal.woff2') format('woff2');
     font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adamina';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/adamina/files/adamina-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -29,7 +50,32 @@ body {
 
 /* Hiệu ứng sọc dọc dùng cho container giới hạn width */
 .bg-stripes {
-    /* Tạo đường kẻ 1px ở cạnh trái của mỗi cột 10% */
-    background-image: linear-gradient(90deg, rgba(184, 184, 184, 0.1) 120px, transparent 120px);
-    background-size: 10% 100%;
+    /* --- TÙY CHỈNH --- */
+    /* 1. Phần trăm chiều rộng của mỗi đường kẻ so với toàn màn hình. 
+          Ví dụ: 8% trên màn 1400px sẽ là 112px. Tăng/giảm số này để cột to/nhỏ tùy ý. */
+    --stripe-pct: 7%;
+
+    /* 2. Số lượng khoảng trống (cột) giữa các sọc. 
+          Ví dụ: 10 khoảng trống sẽ tạo ra 11 đường sọc trải đều màn hình. */
+    /* Số cột chuẩn là 12 */
+    --cols: 12;
+
+    /* Tính toán độ dài của một chu kỳ (1 sọc + 1 khoảng trống).
+       Vì có 12 cột nên sẽ có 11 khoảng trống (cols - 1). */
+    --cycle: calc((100% - var(--stripe-pct)) / (var(--cols) - 1));
+
+    background-image: repeating-linear-gradient(90deg,
+            #b8b8b81a 0,
+            #b8b8b81a var(--stripe-pct),
+            transparent 0,
+            transparent var(--cycle));
+
+    background-size: 100% 100%;
+}
+
+/* Background cho khối xám */
+.bg-custom-gray {
+    /* Đổi số 50% ở đây để chỉnh độ mờ của RIÊNG màu nền (không làm mờ chữ) */
+    --bg-opacity: 70%;
+    background-color: rgb(232 232 232 / var(--bg-opacity));
 }
