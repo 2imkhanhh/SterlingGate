@@ -16,7 +16,7 @@
 <body class="antialiased overflow-x-hidden">
 
     <!-- Phần Top -->
-    <section class="bg-[#232946] text-[#F5F3EF] px-8 py-8 min-h-[650px] flex flex-col relative overflow-hidden">
+    <section class="bg-[#232946] text-[#F5F3EF] px-8 py-6 md:py-8 min-h-[500px] md:min-h-[600px] lg:min-h-[650px] flex flex-col relative overflow-hidden">
 
         <!-- Lớp lưới sọc dọc chỉ nằm trong vùng max-w-[1400px] -->
         <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
@@ -29,13 +29,20 @@
                 <img src="images/logo.png" alt="Sterling Gate Capital Logo" class="h-12 w-auto object-contain">
             </div>
 
-            <nav class="hidden md:flex gap-8 text-sm mt-2">
+            <nav class="hidden lg:flex gap-8 text-sm mt-2">
                 <a href="#" class="hover:text-gray-300 font-bold border-b border-[#F5F3EF] pb-1">Home</a>
                 <a href="#" class="hover:text-gray-300 font-normal">About</a>
                 <a href="#" class="hover:text-gray-300 font-normal">Loan Programs</a>
                 <a href="#" class="hover:text-gray-300 font-normal">FAQ</a>
                 <a href="#" class="hover:text-gray-300 font-normal">Contact</a>
             </nav>
+
+            <!-- Hamburger Button (Mobile/Tablet) -->
+            <button id="mobile-menu-btn" class="block lg:hidden text-[#F5F3EF] hover:text-[#CEB171] mt-2 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="3 3 18 18" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
         </header>
 
         <!-- Main Hero -->
@@ -46,14 +53,14 @@
                     class="w-full h-auto object-contain rounded-xl" />
             </div>
 
-            <div class="flex flex-col lg:flex-row justify-between items-end gap-10">
-                <h1 class="font-adamina font-normal text-[#F5F3EF] text-5xl md:text-6xl lg:text-[4rem] max-w-3xl"
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 lg:gap-10">
+                <h1 class="font-adamina font-normal text-[#F5F3EF] text-[1.75rem] md:text-4xl lg:text-[4rem] max-w-3xl"
                     style="line-height: 1.4;">
                     Commercial Real Estate<br>Financing Made Simple.
                 </h1>
 
-                <div class="flex flex-col items-end gap-8 max-w-md text-right mb-2">
-                    <p class="text-gray-300 font-light text-[1.1rem] leading-relaxed">
+                <div class="flex flex-col items-start lg:items-end gap-6 lg:gap-8 max-w-md text-left lg:text-right mb-2">
+                    <p class="text-gray-300 font-light text-[0.85rem] md:text-[1rem] lg:text-[1.1rem] leading-relaxed">
                         We help you find the right loan for your commercial property — fast, simple, nationwide.
                     </p>
                     <button
@@ -71,7 +78,7 @@
     </section>
 
     <!-- Phần Bottom -->
-    <section class="bg-[#F5F3EF] text-[#232946] px-8 py-24 min-h-[500px] relative overflow-hidden">
+    <section class="bg-[#F5F3EF] text-[#232946] px-8 py-16 md:py-24 min-h-[auto] lg:min-h-[500px] relative overflow-hidden">
 
         <!-- Lớp lưới sọc dọc chỉ nằm trong vùng max-w-[1400px] -->
         <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
@@ -86,31 +93,31 @@
                     Capital?</h3>
             </div>
 
-            <div class="bg-custom-gray p-6 md:p-8 text-[#16171C] h-full flex flex-col min-h-[350px] lg:col-span-3">
-                <h4 class="font-adamina text-3xl md:text-4xl mb-12 leading-tight">Right Loan,<br>Every Time</h4>
-                <p class="text-sm text-[#16171C]/80 mt-auto leading-relaxed">We work with multiple lenders nationwide.
+            <div class="bg-custom-gray p-6 md:p-8 text-[#16171C] h-full flex flex-col min-h-[auto] md:min-h-[350px] lg:col-span-3">
+                <h4 class="font-adamina text-xl md:text-2xl lg:text-4xl mb-4 md:mb-12 leading-tight">Right Loan,<br>Every Time</h4>
+                <p class="text-[0.85rem] md:text-sm text-[#16171C]/80 mt-auto leading-relaxed">We work with multiple lenders nationwide.
                     You get the best option for your property.</p>
             </div>
 
-            <div class="bg-custom-gray p-6 md:p-8 text-[#16171C] h-full flex flex-col min-h-[350px] lg:col-span-3">
-                <h4 class="font-adamina text-3xl md:text-4xl mb-12 leading-tight">Simple &<br>Stress-Free</h4>
-                <p class="text-sm text-[#16171C]/80 mt-auto leading-relaxed">We handle the details and explain
+            <div class="bg-custom-gray p-6 md:p-8 text-[#16171C] h-full flex flex-col min-h-[auto] md:min-h-[350px] lg:col-span-3">
+                <h4 class="font-adamina text-xl md:text-2xl lg:text-4xl mb-4 md:mb-12 leading-tight">Simple &<br>Stress-Free</h4>
+                <p class="text-[0.85rem] md:text-sm text-[#16171C]/80 mt-auto leading-relaxed">We handle the details and explain
                     everything in plain language. No confusing terms.</p>
             </div>
 
-            <div class="bg-custom-gray p-6 md:p-8 text-[#16171C] h-full flex flex-col min-h-[350px] lg:col-span-3">
-                <h4 class="font-adamina text-3xl md:text-4xl mb-12 leading-tight">With You from<br>Start to Close
+            <div class="bg-custom-gray p-6 md:p-8 text-[#16171C] h-full flex flex-col min-h-[auto] md:min-h-[350px] lg:col-span-3">
+                <h4 class="font-adamina text-xl md:text-2xl lg:text-4xl mb-4 md:mb-12 leading-tight">With You from<br>Start to Close
                 </h4>
-                <p class="text-sm text-[#16171C]/80 mt-auto leading-relaxed">From your first call to closing day, we are
+                <p class="text-[0.85rem] md:text-sm text-[#16171C]/80 mt-auto leading-relaxed">From your first call to closing day, we are
                     with you every step of the way.</p>
             </div>
 
         </div>
 
         <!-- Banner Schedule Consultation -->
-        <div class="max-w-[1400px] mx-auto mt-32 relative z-10">
-            <div class="bg-[#CEB171] rounded-sm py-10 flex flex-col items-center justify-center text-center">
-                <h2 class="font-adamina text-[#1A2352] text-3xl md:text-4xl lg:text-[2.5rem] mb-8 max-w-lg"
+        <div class="max-w-[1400px] mx-auto mt-16 md:mt-32 relative z-10">
+            <div class="bg-[#CEB171] rounded-sm py-8 md:py-10 px-4 flex flex-col items-center justify-center text-center">
+                <h2 class="font-adamina text-[#1A2352] text-[1.35rem] md:text-3xl lg:text-[2.5rem] mb-6 md:mb-8 max-w-lg"
                     style="line-height: 1.6;">
                     Schedule Your Free<br>Consultation Today
                 </h2>
@@ -128,12 +135,12 @@
 
         <!-- We Work With Section -->
         <div
-            class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-x-[calc(16%/11)] mt-32 relative z-10 pb-20">
+            class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-x-[calc(16%/11)] mt-16 md:mt-32 relative z-10 pb-12 md:pb-20">
 
             <!-- Left Side -->
             <div class="lg:col-span-5">
-                <h3 class="text-sm tracking-[0.15em] uppercase font-semibold text-[#16171C] mb-6">We Work With</h3>
-                <h2 class="font-adamina text-[#232946] text-2xl md:text-3xl lg:text-[2.2rem]" style="line-height: 1.4;">
+                <h3 class="text-xs md:text-sm tracking-[0.15em] uppercase font-semibold text-[#16171C] mb-4 md:mb-6">We Work With</h3>
+                <h2 class="font-adamina text-[#232946] text-lg md:text-2xl lg:text-[2.2rem]" style="line-height: 1.4;">
                     Commercial Property<br>Owners and Investors
                 </h2>
             </div>
@@ -176,19 +183,19 @@
         </div>
 
         <!-- Contact CTA Banner -->
-        <div class="max-w-[1400px] mx-auto mt-16 relative z-10 pb-24">
+        <div class="max-w-[1400px] mx-auto mt-12 md:mt-16 relative z-10 pb-12 md:pb-24">
             <div class="bg-custom-gray rounded-sm overflow-hidden relative">
 
                 <!-- Grid Layout to align exactly with background stripes -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-x-[calc(16%/11)] relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-x-[calc(16%/11)] relative z-10">
 
                     <!-- Left Content Starting at Column 2 -->
-                    <div class="lg:col-start-2 lg:col-span-6 flex flex-col justify-center py-16 lg:py-24 px-8 lg:px-0">
-                        <h2 class="font-adamina text-[#1A2352] text-2xl md:text-3xl lg:text-[2.2rem] leading-snug mb-8">
+                    <div class="lg:col-start-2 lg:col-span-6 flex flex-col justify-center py-12 md:py-16 lg:py-24 px-8 lg:px-0">
+                        <h2 class="font-adamina text-[#1A2352] text-lg md:text-2xl lg:text-[2.2rem] leading-snug mb-6 md:mb-8">
                             <span class="block mb-3 md:mb-4">Have a property and need financing?</span>
                             <span class="block">Let's talk.</span>
                         </h2>
-                        <p class="text-[0.95rem] text-[#16171C] mb-10 max-w-sm leading-relaxed font-medium">
+                        <p class="text-[0.85rem] md:text-[0.95rem] text-[#16171C] mb-10 max-w-sm leading-relaxed font-medium">
                             Call 251.888.6868 or fill out our contact form<br>for a free consultation.
                         </p>
                         <div class="flex flex-wrap items-center gap-4">
@@ -239,7 +246,7 @@
             <!-- CTA Section -->
             <div class="w-full flex justify-center pt-12 pb-10 lg:pt-16 lg:pb-40">
                 <div class="flex flex-col items-center justify-center text-center">
-                    <h2 class="font-adamina text-4xl md:text-5xl lg:text-[3.25rem] mb-10 text-[#F5F3EF]"
+                    <h2 class="font-adamina text-2xl md:text-4xl lg:text-[3.25rem] mb-6 md:mb-10 text-[#F5F3EF]"
                         style="line-height: 1.2;">
                         Investment That<br>Compounds Value
                     </h2>
@@ -264,16 +271,16 @@
                 <div class="absolute top-0 bottom-0 left-1/2 w-[1px] bg-[#C9A84C] hidden md:block lg:hidden -translate-x-1/2">
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-12 md:gap-x-16 lg:gap-x-[calc(16%/11)]">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-4 md:gap-y-12 md:gap-x-16 lg:gap-x-[calc(16%/11)]">
                     <!-- Left Side -->
-                    <div class="pt-8 pb-24 flex flex-col justify-between min-h-[420px] lg:col-span-6">
+                    <div class="pt-8 pb-2 md:pb-24 flex flex-col justify-between min-h-[auto] md:min-h-[350px] lg:min-h-[420px] lg:col-span-6">
                         <div>
                             <img src="images/logo2.png" alt="Sterling Gate Capital Logo"
-                                class="h-12 lg:h-14 w-auto object-contain">
+                                class="h-10 lg:h-14 w-auto object-contain">
                         </div>
-                        <div class="mt-16 md:mt-auto">
+                        <div class="mt-12 md:mt-auto">
                             <h2
-                                class="font-bold text-3xl md:text-4xl lg:text-[2.5rem] tracking-[0.1em] uppercase leading-[1.1] text-[#F5F3EF]">
+                                class="font-bold text-[1.35rem] md:text-3xl lg:text-[2.5rem] tracking-[0.1em] uppercase leading-[1.1] text-[#F5F3EF]">
                                 Sterling Gate<br>Capital
                             </h2>
                         </div>
@@ -285,9 +292,9 @@
                     </div>
 
                     <!-- Right Side -->
-                    <div class="pt-8 pb-24 flex flex-col justify-between min-h-[420px] lg:col-start-8 lg:col-span-5">
-                        <div class="grid grid-cols-2 gap-8 lg:gap-16">
-                            <div>
+                    <div class="pt-2 md:pt-8 pb-12 md:pb-24 flex flex-col justify-between min-h-[auto] md:min-h-[350px] lg:min-h-[420px] lg:col-start-8 lg:col-span-5">
+                        <div class="grid grid-cols-4 gap-x-[calc(16%/3)] md:grid-cols-2 md:gap-x-8 lg:gap-x-16">
+                            <div class="col-span-2 md:col-span-1">
                                 <h4 class="font-bold text-[#F5F3EF] mb-3 text-[0.85rem] tracking-wide">Pages</h4>
                                 <ul class="space-y-1.5 text-[0.85rem] text-[#F5F3EF]/70">
                                     <li><a href="#" class="hover:text-white transition-colors">About</a></li>
@@ -296,7 +303,7 @@
                                     <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
                                 </ul>
                             </div>
-                            <div>
+                            <div class="col-span-2 md:col-span-1">
                                 <div class="mb-6">
                                     <h4 class="font-bold text-[#F5F3EF] mb-1.5 text-[0.85rem] tracking-wide">Email:</h4>
                                     <a href="mailto:invest@sterlinggatecapital.com"
@@ -329,6 +336,75 @@
             </div>
         </div>
     </section>
+
+    <!-- Mobile Sidebar Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] pointer-events-none">
+        <!-- Backdrop -->
+        <div id="mobile-backdrop" class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 pointer-events-auto hidden"></div>
+        
+        <!-- Sidebar -->
+        <div id="mobile-sidebar" class="absolute top-0 right-0 h-full w-[85%] max-w-sm bg-[#1A2352] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col pointer-events-auto">
+            <!-- Header (Close Button) -->
+            <div class="flex justify-end p-8 border-b border-white/10">
+                <button id="mobile-close-btn" class="text-[#F5F3EF] hover:text-[#CEB171] transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Navigation Links -->
+            <nav class="flex flex-col gap-2 p-8 text-[#F5F3EF] text-lg">
+                <a href="#" class="hover:text-[#CEB171] font-bold border-b border-white/10 pb-4 transition-colors">Home</a>
+                <a href="#" class="hover:text-[#CEB171] font-normal border-b border-white/10 py-4 transition-colors">About</a>
+                <a href="#" class="hover:text-[#CEB171] font-normal border-b border-white/10 py-4 transition-colors">Loan Programs</a>
+                <a href="#" class="hover:text-[#CEB171] font-normal border-b border-white/10 py-4 transition-colors">FAQ</a>
+                <a href="#" class="hover:text-[#CEB171] font-normal py-4 transition-colors">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileBackdrop = document.getElementById('mobile-backdrop');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+
+        function toggleMenu() {
+            const isMenuOpen = !mobileSidebar.classList.contains('translate-x-full');
+            
+            if (isMenuOpen) {
+                // Close menu
+                mobileSidebar.classList.add('translate-x-full');
+                mobileBackdrop.classList.remove('opacity-100');
+                mobileBackdrop.classList.add('opacity-0');
+                
+                setTimeout(() => {
+                    mobileBackdrop.classList.add('hidden');
+                    mobileMenu.classList.remove('pointer-events-auto');
+                    mobileMenu.classList.add('pointer-events-none');
+                }, 300);
+            } else {
+                // Open menu
+                mobileMenu.classList.remove('pointer-events-none');
+                mobileMenu.classList.add('pointer-events-auto');
+                mobileBackdrop.classList.remove('hidden');
+                
+                // Trigger transition
+                setTimeout(() => {
+                    mobileBackdrop.classList.remove('opacity-0');
+                    mobileBackdrop.classList.add('opacity-100');
+                    mobileSidebar.classList.remove('translate-x-full');
+                }, 10);
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileCloseBtn.addEventListener('click', toggleMenu);
+        mobileBackdrop.addEventListener('click', toggleMenu);
+    </script>
 
 </body>
 

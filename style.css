@@ -50,18 +50,10 @@ body {
 
 /* Hiệu ứng sọc dọc dùng cho container giới hạn width */
 .bg-stripes {
-    /* --- TÙY CHỈNH --- */
-    /* 1. Phần trăm chiều rộng của mỗi đường kẻ so với toàn màn hình. 
-          Ví dụ: 8% trên màn 1400px sẽ là 112px. Tăng/giảm số này để cột to/nhỏ tùy ý. */
-    --stripe-pct: 7%;
-
-    /* 2. Số lượng khoảng trống (cột) giữa các sọc. 
-          Ví dụ: 10 khoảng trống sẽ tạo ra 11 đường sọc trải đều màn hình. */
-    /* Số cột chuẩn là 12 */
-    --cols: 12;
-
-    /* Tính toán độ dài của một chu kỳ (1 sọc + 1 khoảng trống).
-       Vì có 12 cột nên sẽ có 11 khoảng trống (cols - 1). */
+    /* Mặc định trên Mobile (dưới 768px): Ít cột hơn, cột to hơn (4 cột) */
+    --cols: 4;
+    --stripe-pct: 21%; /* Tổng màu 84% chia cho 4 cột = 21% mỗi cột */
+    
     --cycle: calc((100% - var(--stripe-pct)) / (var(--cols) - 1));
 
     background-image: repeating-linear-gradient(90deg,
@@ -71,6 +63,22 @@ body {
             transparent var(--cycle));
 
     background-size: 100% 100%;
+}
+
+/* Tablet (từ 768px trở lên): 6 cột */
+@media (min-width: 768px) {
+    .bg-stripes {
+        --cols: 6;
+        --stripe-pct: 14%; /* 84% chia cho 6 cột = 14% */
+    }
+}
+
+/* Desktop (từ 1024px trở lên): 12 cột chuẩn nguyên bản */
+@media (min-width: 1024px) {
+    .bg-stripes {
+        --cols: 12;
+        --stripe-pct: 7%; /* 84% chia cho 12 cột = 7% */
+    }
 }
 
 /* Background cho khối xám */
