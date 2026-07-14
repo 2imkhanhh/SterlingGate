@@ -423,9 +423,6 @@
   .max-w-3xl {
     max-width: var(--container-3xl);
   }
-  .max-w-\[1400px\] {
-    max-width: 1400px;
-  }
   .max-w-lg {
     max-width: var(--container-lg);
   }
@@ -1671,6 +1668,16 @@ body {
 .bg-custom-gray {
   --bg-opacity: 70%;
   background-color: rgb(232 232 232 / var(--bg-opacity));
+}
+@media (min-width: 1536px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 2560px) {
+  html {
+    font-size: 24px;
+  }
 }
 @property --tw-translate-x {
   syntax: "*";
