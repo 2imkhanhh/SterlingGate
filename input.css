@@ -50,34 +50,7 @@ body {
     font-family: 'Adamina', serif;
 }
 
-.bg-stripes {
-    --cols: 4;
-    --stripe-pct: 21%; 
-    
-    --cycle: calc((100% - var(--stripe-pct)) / (var(--cols) - 1));
 
-    background-image: repeating-linear-gradient(90deg,
-            #b8b8b81a 0,
-            #b8b8b81a var(--stripe-pct),
-            transparent 0,
-            transparent var(--cycle));
-
-    background-size: 100% 100%;
-}
-
-@media (min-width: 768px) {
-    .bg-stripes {
-        --cols: 6;
-        --stripe-pct: 14%; 
-    }
-}
-
-@media (min-width: 1024px) {
-    .bg-stripes {
-        --cols: 12;
-        --stripe-pct: 7%; 
-    }
-}
 
 .bg-custom-gray {
     --bg-opacity: 70%;
