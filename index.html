@@ -15,27 +15,23 @@
 
 <body class="antialiased overflow-x-hidden">
 
-    <!-- Phần Top -->
-    <section
-        class="bg-[#232946] text-[#F5F3EF] px-8 py-6 md:py-8 min-h-[500px] md:min-h-[600px] lg:min-h-[650px] flex flex-col relative overflow-hidden">
-
-        <!-- Lớp lưới sọc dọc chỉ nằm trong vùng max-w-[1400px] -->
-        <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
-            <div class="mx-auto w-full max-w-[1400px] h-full bg-stripes"></div>
-        </div>
-
-        <!-- Header -->
-        <header class="flex justify-between items-start mb-12 max-w-[1400px] mx-auto w-full relative z-10">
+    <!-- Header (Fixed) -->
+    <header id="main-header"
+        class="fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-300 px-8 py-6 md:py-8 bg-transparent text-[#F5F3EF]">
+        <div class="flex justify-between items-center max-w-[1400px] mx-auto w-full">
             <div class="flex items-center gap-3">
-                <img src="images/logo.png" alt="Sterling Gate Capital Logo" class="h-12 w-auto object-contain">
+                <a href="index.html">
+                    <img id="header-logo" src="images/logo.png" alt="Sterling Gate Capital Logo"
+                        class="h-12 w-auto object-contain transition-all duration-300">
+                </a>
             </div>
 
             <nav class="hidden lg:flex gap-8 text-sm mt-2">
-                <a href="index.html" class="hover:text-gray-300 font-bold">Home</a>
-                <a href="about.html" class="hover:text-gray-300 font-normal">About</a>
-                <a href="#" class="hover:text-gray-300 font-normal">Loan Programs</a>
-                <a href="#" class="hover:text-gray-300 font-normal">FAQ</a>
-                <a href="#" class="hover:text-gray-300 font-normal">Contact</a>
+                <a href="index.html" class="hover:text-gray-300 font-bold transition-colors">Home</a>
+                <a href="about.html" class="hover:text-gray-300 font-normal transition-colors">About</a>
+                <a href="#" class="hover:text-gray-300 font-normal transition-colors">Loan Programs</a>
+                <a href="#" class="hover:text-gray-300 font-normal transition-colors">FAQ</a>
+                <a href="#" class="hover:text-gray-300 font-normal transition-colors">Contact</a>
             </nav>
 
             <!-- Hamburger Button (Mobile/Tablet) -->
@@ -47,7 +43,17 @@
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </button>
-        </header>
+        </div>
+    </header>
+
+    <!-- Phần Top -->
+    <section
+        class="bg-[#232946] text-[#F5F3EF] px-8 pb-6 pt-32 md:pb-8 md:pt-40 min-h-[500px] md:min-h-[600px] lg:min-h-[650px] flex flex-col relative overflow-hidden">
+
+        <!-- Lớp lưới sọc dọc chỉ nằm trong vùng max-w-[1400px] -->
+        <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
+            <div class="mx-auto w-full max-w-[1400px] h-full bg-stripes"></div>
+        </div>
 
         <!-- Main Hero -->
         <div class="max-w-[1400px] mx-auto w-full flex-1 flex flex-col justify-center relative z-10">
@@ -303,8 +309,8 @@
                                 class="h-10 lg:h-14 w-auto object-contain">
                         </div>
                         <div class="mt-12 md:mt-auto">
-                            <h2
-                                class="font-bold text-[1.35rem] md:text-3xl lg:text-[2.5rem] tracking-[0.1em] uppercase leading-[1.1] text-[#F5F3EF]">
+                            <h2 class="font-adamina font-normal text-[1.35rem] md:text-3xl lg:text-[2.5rem] tracking-[0.1em] uppercase text-[#F5F3EF]"
+                                style="line-height: 1.4;">
                                 Sterling Gate<br>Capital
                             </h2>
                         </div>
@@ -439,6 +445,22 @@
         mobileMenuBtn.addEventListener('click', toggleMenu);
         mobileCloseBtn.addEventListener('click', toggleMenu);
         mobileBackdrop.addEventListener('click', toggleMenu);
+
+        // Header Scroll Effect
+        const header = document.getElementById('main-header');
+        const logo = document.getElementById('header-logo');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-[#1A2352]/95', 'backdrop-blur-md', 'shadow-md', 'py-4', 'md:py-4');
+                header.classList.remove('py-6', 'md:py-8', 'bg-transparent');
+                logo.classList.replace('h-12', 'h-10');
+            } else {
+                header.classList.add('py-6', 'md:py-8', 'bg-transparent');
+                header.classList.remove('bg-[#1A2352]/95', 'backdrop-blur-md', 'shadow-md', 'py-4', 'md:py-4');
+                logo.classList.replace('h-10', 'h-12');
+            }
+        });
     </script>
 
 </body>
