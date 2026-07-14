@@ -1093,6 +1093,11 @@
       grid-column: span 3 / span 3;
     }
   }
+  .md\:mt-0 {
+    @media (width >= 48rem) {
+      margin-top: 0;
+    }
+  }
   .md\:mt-8 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 8);
