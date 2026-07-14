@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-300-normal.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-500-normal.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-600-normal.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/files/geist-sans-latin-700-normal.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adamina';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/adamina/files/adamina-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+}
+
+.font-adamina {
+    font-family: 'Adamina', serif;
+}
+
+.bg-stripes {
+    --cols: 4;
+    --stripe-pct: 21%; 
+    
+    --cycle: calc((100% - var(--stripe-pct)) / (var(--cols) - 1));
+
+    background-image: repeating-linear-gradient(90deg,
+            #b8b8b81a 0,
+            #b8b8b81a var(--stripe-pct),
+            transparent 0,
+            transparent var(--cycle));
+
+    background-size: 100% 100%;
+}
+
+@media (min-width: 768px) {
+    .bg-stripes {
+        --cols: 6;
+        --stripe-pct: 14%; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .bg-stripes {
+        --cols: 12;
+        --stripe-pct: 7%; 
+    }
+}
+
+.bg-custom-gray {
+    --bg-opacity: 70%;
+    background-color: rgb(232 232 232 / var(--bg-opacity));
+}
