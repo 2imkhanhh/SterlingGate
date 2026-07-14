@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Sterling Gate Capital</title>
+    <title>Contact - Sterling Gate Capital</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -16,26 +16,26 @@
 
     <!-- Header (Fixed) -->
     <header id="main-header"
-        class="fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-300 px-8 py-6 md:py-8 bg-transparent text-[#F5F3EF]">
+        class="fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-300 px-8 py-6 md:py-8 bg-transparent text-[#1A2352]">
         <div class="flex justify-between items-center max-w-[1400px] mx-auto w-full">
             <div class="flex items-center gap-3">
                 <a href="index.html">
-                    <img id="header-logo" src="images/logo.png" alt="Sterling Gate Capital Logo"
+                    <img id="header-logo" src="images/logo3.png" alt="Sterling Gate Capital Logo"
                         class="h-12 w-auto object-contain transition-all duration-300">
                 </a>
             </div>
 
             <nav class="hidden lg:flex gap-8 text-sm mt-2">
-                <a href="index.html" class="hover:text-gray-300 font-normal transition-colors">Home</a>
-                <a href="about.html" class="hover:text-gray-300 font-bold transition-colors">About</a>
-                <a href="programs.html" class="hover:text-gray-300 font-normal transition-colors">Loan Programs</a>
-                <a href="faq.html" class="hover:text-gray-300 font-normal transition-colors">FAQ</a>
-                <a href="contact.html" class="hover:text-gray-300 font-normal transition-colors">Contact</a>
+                <a href="index.html" class="hover:text-gray-600 font-normal transition-colors">Home</a>
+                <a href="about.html" class="hover:text-gray-600 font-normal transition-colors">About</a>
+                <a href="programs.html" class="hover:text-gray-600 font-normal transition-colors">Loan Programs</a>
+                <a href="faq.html" class="hover:text-gray-600 font-normal transition-colors">FAQ</a>
+                <a href="contact.html" class="text-[#1A2352] font-semibold transition-colors">Contact</a>
             </nav>
 
             <!-- Hamburger Button (Mobile/Tablet) -->
             <button id="mobile-menu-btn"
-                class="block lg:hidden text-[#F5F3EF] hover:text-[#CEB171] mt-2 transition-colors">
+                class="block lg:hidden text-[#1A2352] hover:text-[#CEB171] mt-2 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="3 3 18 18" stroke-width="1.5"
                     stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -45,148 +45,125 @@
         </div>
     </header>
 
-    <!-- Phần Top -->
-    <section class="bg-[#232946] text-[#F5F3EF] px-8 pt-32 md:pt-40 flex flex-col relative overflow-hidden">
-
+    <!-- Main Section -->
+    <section
+        class="bg-[#F5F3EF] text-[#232946] px-8 pt-32 md:pt-48 pb-16 md:pb-24 flex flex-col relative overflow-hidden min-h-screen">
         <!-- Lớp lưới sọc dọc chỉ nằm trong vùng max-w-[1400px] -->
         <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
-            <div class="mx-auto w-full max-w-[1400px] h-full bg-stripes"></div>
-        </div>
-
-        <!-- Main Hero -->
-        <div class="max-w-[1400px] mx-auto w-full flex-1 flex flex-col justify-center relative z-10 pb-16 lg:pb-24">
-            <div class="w-full rounded-xl overflow-hidden shadow-2xl">
-                <img src="images/about_hero.jpg" alt="Sterling Gate Capital Meeting"
-                    class="w-full h-auto max-h-[500px] object-cover rounded-xl" />
+            <div class="mx-auto w-full max-w-[1400px] h-full bg-stripes"
+                style="background-image: repeating-linear-gradient(90deg, #b8b8b822 0, #b8b8b822 var(--stripe-pct), transparent 0, transparent var(--cycle));">
             </div>
         </div>
-    </section>
 
-    <!-- Phần Middle -->
-    <section class="bg-[#F5F3EF] text-[#232946] px-8 py-16 md:py-24 relative overflow-hidden">
-        <!-- Lớp lưới sọc dọc -->
-        <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
-            <div class="mx-auto w-full max-w-[1400px] h-full bg-stripes"></div>
-        </div>
+        <div class="max-w-[1400px] mx-auto w-full flex-1 flex flex-col relative z-10">
 
-        <div class="max-w-[1400px] mx-auto relative z-10">
-            <!-- ABOUT QUYEN NGUYEN Title -->
-            <div class="mb-6 md:mb-10">
-                <h3 class="text-xs md:text-sm tracking-[0.15em] uppercase font-semibold text-[#16171C]">About Quyen
-                    Nguyen</h3>
-            </div>
-
-            <!-- Bio Block -->
-            <div
-                class="w-full bg-custom-gray flex flex-col lg:grid lg:grid-cols-12 lg:gap-x-[calc(16%/11)] overflow-hidden rounded-sm shadow-sm">
-
-                <!-- Image Left -->
-                <div class="lg:col-span-3">
-                    <img src="images/person.png" alt="Quyen Nguyen" class="w-full h-[350px] lg:h-full object-cover">
-                </div>
-
-                <!-- Content Right -->
-                <div class="lg:col-span-9 py-10 px-6 md:p-12 lg:p-16 flex flex-col justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1A2352" viewBox="0 0 24 24"
-                        class="w-10 h-10 md:w-12 md:h-12 mb-6">
-                        <path
-                            d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                    </svg>
-
-                    <p class="font-adamina text-[#16171C] text-[0.95rem] md:text-[1.1rem] leading-relaxed mb-6">
-                        I help business owners and real estate investors secure the right financing for their commercial
-                        properties through a trusted nationwide lender network. My goal is to make the financing process
-                        simple, clear, and stress-free.
-                    </p>
-                    <p
-                        class="font-adamina text-[#16171C] text-[0.95rem] md:text-[1.1rem] leading-relaxed mb-8 md:mb-10">
-                        If you have a property and need financing, I am here to help.
-                    </p>
-
-                    <div>
-                        <h4 class="font-semibold text-[#16171C] text-[0.9rem] md:text-[1rem] tracking-wide mb-1">Quyen
-                            Nguyen</h4>
-                        <p class="text-[#16171C]/70 text-[0.75rem] uppercase tracking-[0.1em]">Principal of Sterling
-                            Gate</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Banner -->
-            <div class="mt-16 md:mt-32">
-                <div
-                    class="bg-[#CEB171] rounded-sm py-8 md:py-10 px-4 flex flex-col items-center justify-center text-center">
-                    <h2 class="font-adamina text-[#1A2352] text-[1.35rem] md:text-3xl lg:text-[2.5rem] mb-6 md:mb-8 max-w-lg"
-                        style="line-height: 1.6;">
+            <!-- Top Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-x-[calc(16%/11)] items-end mb-16 md:mb-24">
+                <div class="lg:col-span-5 pb-8 md:pb-12">
+                    <h1 class="font-adamina font-normal text-[#1A2352] text-[2.5rem] md:text-5xl lg:text-[4rem]"
+                        style="line-height: 1.3">
                         Let's Talk About<br>Your Property
-                    </h2>
-                    <button
-                        class="bg-[#1A2352] text-[#F5F3EF] hover:bg-[#CEB171] transition-colors px-6 py-3 text-xs tracking-[0.15em] font-semibold uppercase flex items-center gap-3 rounded-sm shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                            <path fill-rule="evenodd"
-                                d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        251.888.6868
-                    </button>
+                    </h1>
+                </div>
+                <!-- Top Right: Free consultation -->
+                <div class="lg:col-start-7 lg:col-span-6 w-full">
+                    <p class="text-[1.1rem] text-[#000000] leading-relaxed mb-6 max-w-sm">
+                        Free consultation. No pressure. No commitment. Just clear, honest answers.
+                    </p>
+                    <!-- Horizontal Divider -->
+                    <div class="w-full h-[1px] bg-[#8D91A4]"></div>
                 </div>
             </div>
 
-            <!-- Our Values Section -->
-            <div class="mt-10 md:mt-16 lg:mt-24">
-                <div class="mb-4 md:mb-8">
-                    <h3 class="text-xs md:text-sm tracking-[0.15em] uppercase font-semibold text-[#16171C]">Our Values
-                    </h3>
+            <!-- Bottom Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-x-[calc(16%/11)] relative">
+
+                <!-- Left Side: Contact Info -->
+                <div class="lg:col-span-5">
+
+                    <h3 class="text-[0.95rem] font-medium text-[#000000] uppercase tracking-wider mb-10">Contact
+                        Information</h3>
+
+                    <div class="flex flex-col gap-8">
+                        <div>
+                            <p class="text-[0.85rem] text-[#16171C] mb-1.5">Name</p>
+                            <p class="text-[0.95rem] font-medium text-[#000000]">Adeline Q. Nguyen</p>
+                        </div>
+                        <div>
+                            <p class="text-[0.85rem] text-[#16171C] mb-1.5">Phone</p>
+                            <p class="text-[0.95rem] font-medium text-[#000000]">251 888 6868</p>
+                        </div>
+                        <div>
+                            <p class="text-[0.85rem] text-[#16171C] mb-1.5">Email</p>
+                            <p class="text-[0.95rem] font-medium text-[#000000]">adeline@sterlinggatepartners.com</p>
+                        </div>
+                        <div>
+                            <p class="text-[0.85rem] text-[#16171C] mb-1.5">Coverage</p>
+                            <p class="text-[0.95rem] font-medium text-[#000000]">Nationwide &mdash; All States</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-x-[calc(16%/11)]">
+                <!-- Right Side: Contact Form -->
+                <div class="lg:col-start-7 lg:col-span-6 flex flex-col pt-8 lg:pt-0">
 
-                    <!-- Card 1: Clarity (Staggered Down) -->
-                    <div class="lg:col-span-3 flex flex-col">
-                        <div class="w-full mb-6">
-                            <img src="images/value1.png" alt="Clarity" class="w-full h-auto object-cover rounded-sm">
-                        </div>
-                        <h4 class="font-bold text-[#16171C] text-[0.95rem] tracking-wide mb-3 uppercase">Clarity</h4>
-                        <p class="text-[#16171C]/80 text-[0.85rem] leading-relaxed">
-                            We explain every option in plain language.
-                        </p>
-                    </div>
+                    <h3 class="text-[0.95rem] font-medium text-[#000000] uppercase tracking-wider mb-8">Contact Form
+                        Fields</h3>
 
-                    <!-- Card 2: Honesty -->
-                    <div class="lg:col-span-3 flex flex-col">
-                        <div class="w-full mb-6">
-                            <img src="images/value2.png" alt="Honesty" class="w-full h-auto object-cover rounded-sm">
+                    <form class="flex flex-col">
+                        <!-- Row 1 -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-5">
+                            <input type="text" placeholder="First Name"
+                                class="bg-transparent outline-none text-[#16171C] text-[0.85rem] placeholder-[#16171C]/80 py-5 w-full border-b border-[#8D91A4]">
+                            <input type="text" placeholder="Last Name"
+                                class="bg-transparent outline-none text-[#16171C] text-[0.85rem] placeholder-[#16171C]/80 py-5 w-full border-b border-[#8D91A4]">
                         </div>
-                        <h4 class="font-bold text-[#16171C] text-[0.95rem] tracking-wide mb-3 uppercase">Honesty</h4>
-                        <p class="text-[#16171C]/80 text-[0.85rem] leading-relaxed">
-                            We give you straight answers — always.
-                        </p>
-                    </div>
 
-                    <!-- Card 3: Service (Staggered Down) -->
-                    <div class="lg:col-span-3 flex flex-col">
-                        <div class="w-full mb-6">
-                            <img src="images/value3.png" alt="Service" class="w-full h-auto object-cover rounded-sm">
+                        <!-- Row 2 -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-5">
+                            <input type="tel" placeholder="Phone Number"
+                                class="bg-transparent outline-none text-[#16171C] text-[0.85rem] placeholder-[#16171C]/80 py-5 w-full border-b border-[#8D91A4]">
+                            <input type="email" placeholder="Email Address"
+                                class="bg-transparent outline-none text-[#16171C] text-[0.85rem] placeholder-[#16171C]/80 py-5 w-full border-b border-[#8D91A4]">
                         </div>
-                        <h4 class="font-bold text-[#16171C] text-[0.95rem] tracking-wide mb-3 uppercase">Service</h4>
-                        <p class="text-[#16171C]/80 text-[0.85rem] leading-relaxed">
-                            We are with you from the first call to closing.
-                        </p>
-                    </div>
 
-                    <!-- Card 4: Results -->
-                    <div class="lg:col-span-3 flex flex-col">
-                        <div class="w-full mb-6">
-                            <img src="images/value4.png" alt="Results" class="w-full h-auto object-cover rounded-sm">
+                        <!-- Row 3 -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-5">
+                            <input type="text" placeholder="Property Type"
+                                class="bg-transparent outline-none text-[#16171C] text-[0.85rem] placeholder-[#16171C]/80 py-5 w-full border-b border-[#8D91A4]">
+                            <input type="text" placeholder="Property Location"
+                                class="bg-transparent outline-none text-[#16171C] text-[0.85rem] placeholder-[#16171C]/80 py-5 w-full border-b border-[#8D91A4]">
                         </div>
-                        <h4 class="font-bold text-[#16171C] text-[0.95rem] tracking-wide mb-3 uppercase">Results</h4>
-                        <p class="text-[#16171C]/80 text-[0.85rem] leading-relaxed">
-                            We focus on finding the right solution for your goals.
-                        </p>
-                    </div>
+
+                        <!-- Row 4 -->
+                        <div class="border-b border-[#8D91A4]">
+                            <input type="text" placeholder="Estimated Loan Amount"
+                                class="bg-transparent outline-none text-[#16171C] text-[0.85rem] placeholder-[#16171C]/80 py-5 w-full">
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="border-b border-[#8D91A4]">
+                            <textarea placeholder="Tell us about your property and what you need" rows="4"
+                                class="bg-transparent outline-none text-[#16171C] text-[0.85rem] placeholder-[#16171C]/80 py-5 w-full resize-none"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="mt-8">
+                            <button type="submit"
+                                class="border border-[#1A2352]/40 hover:bg-[#1A2352] hover:text-[#F5F3EF] transition-all duration-300 px-6 py-2.5 text-[0.7rem] tracking-[0.1em] uppercase flex items-center gap-2 rounded-sm text-[#1A2352] font-semibold w-max">
+                                SCHEDULE MY FREE CONSULTATION
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-3.5 h-3.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
 
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -261,9 +238,11 @@
                                 <ul class="space-y-1.5 text-[0.85rem] text-[#F5F3EF]/70">
                                     <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                                     <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
-                                    <li><a href="programs.html" class="hover:text-white transition-colors">Loan Programs</a></li>
+                                    <li><a href="programs.html" class="hover:text-white transition-colors">Loan
+                                            Programs</a></li>
                                     <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
-                                    <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                                    <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-span-2 md:col-span-1">
@@ -325,7 +304,7 @@
                 <a href="index.html"
                     class="hover:text-[#CEB171] font-normal border-b border-white/10 pb-4 transition-colors">Home</a>
                 <a href="about.html"
-                    class="hover:text-[#CEB171] font-bold border-b border-white/10 py-4 transition-colors">About</a>
+                    class="hover:text-[#CEB171] font-normal border-b border-white/10 py-4 transition-colors">About</a>
                 <a href="programs.html"
                     class="hover:text-[#CEB171] font-normal border-b border-white/10 py-4 transition-colors">Loan
                     Programs</a>
@@ -382,11 +361,11 @@
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                header.classList.add('bg-[#1A2352]/95', 'backdrop-blur-md', 'shadow-lg', 'py-3', 'md:py-3');
+                header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg', 'py-3', 'md:py-3');
                 header.classList.remove('py-6', 'md:py-8', 'bg-transparent');
             } else {
                 header.classList.add('py-6', 'md:py-8', 'bg-transparent');
-                header.classList.remove('bg-[#1A2352]/95', 'backdrop-blur-md', 'shadow-lg', 'py-3', 'md:py-3');
+                header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg', 'py-3', 'md:py-3');
             }
         });
     </script>
