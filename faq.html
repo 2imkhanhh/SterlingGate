@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Sterling Gate Capital</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -30,7 +28,6 @@
 
 <body class="antialiased overflow-x-hidden overscroll-none">
 
-    <!-- Header (Fixed) -->
     <header id="main-header"
         class="fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-300 px-8 py-6 md:py-8 bg-transparent text-[#1A2352]">
         <div class="flex justify-between items-center max-w-[1400px] mx-auto w-full">
@@ -49,7 +46,6 @@
                 <a href="contact.html" class="hover:text-gray-600 font-normal transition-colors">Contact</a>
             </nav>
 
-            <!-- Hamburger Button (Mobile/Tablet) -->
             <button id="mobile-menu-btn"
                 class="block lg:hidden text-[#1A2352] hover:text-[#CEB171] mt-2 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="3 3 18 18" stroke-width="1.5"
@@ -61,10 +57,8 @@
         </div>
     </header>
 
-    <!-- Main Section -->
     <section
         class="bg-[#F5F3EF] text-[#232946] px-8 pt-32 md:pt-48 pb-16 md:pb-24 flex flex-col relative overflow-hidden min-h-screen">
-        <!-- Lớp lưới sọc dọc chỉ nằm trong vùng max-w-[1400px] -->
         <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
             <div class="mx-auto w-full max-w-[1400px] h-full bg-stripes"
                 style="background-image: repeating-linear-gradient(90deg, #b8b8b822 0, #b8b8b822 var(--stripe-pct), transparent 0, transparent var(--cycle));">
@@ -80,18 +74,14 @@
                 </h1>
             </div>
 
-            <!-- FAQ List -->
             <div class="flex flex-col border-t border-[#8D91A4]">
 
-                <!-- Item 1 -->
                 <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
                     <div
                         class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
-                        <!-- Number -->
                         <div class="lg:col-span-6 flex justify-start">
                             <span class="text-[0.95rem] md:text-[1rem] font-medium text-[#000000]">01</span>
                         </div>
-                        <!-- Question & Answer -->
                         <div class="lg:col-span-6 flex flex-col relative">
                             <div class="flex justify-between items-start w-full gap-4">
                                 <h3
@@ -114,7 +104,6 @@
                     </div>
                 </div>
 
-                <!-- Item 2 -->
                 <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
                     <div
                         class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
@@ -142,7 +131,6 @@
                     </div>
                 </div>
 
-                <!-- Item 3 -->
                 <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
                     <div
                         class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
@@ -170,7 +158,6 @@
                     </div>
                 </div>
 
-                <!-- Item 4 -->
                 <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
                     <div
                         class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
@@ -198,7 +185,6 @@
                     </div>
                 </div>
 
-                <!-- Item 5 -->
                 <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
                     <div
                         class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
@@ -226,7 +212,6 @@
                     </div>
                 </div>
 
-                <!-- Item 6 -->
                 <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
                     <div
                         class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
@@ -255,7 +240,6 @@
                     </div>
                 </div>
 
-                <!-- Item 7 -->
                 <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
                     <div
                         class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
@@ -285,7 +269,6 @@
 
             </div>
 
-            <!-- CTA Banner -->
             <div class="mt-16 md:mt-32">
                 <div
                     class="bg-[#CEB171] rounded-sm py-8 md:py-10 px-4 flex flex-col items-center justify-center text-center">
@@ -308,7 +291,6 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
     <section
         class="bg-[#232946] text-[#F5F3EF] px-8 relative overflow-hidden flex flex-col border-t border-[#CEB171]/20">
         <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
@@ -317,7 +299,6 @@
 
         <div class="relative z-10 flex flex-col w-full flex-1">
 
-            <!-- CTA Section -->
             <div class="w-full flex justify-center pt-12 pb-10 lg:pt-16 lg:pb-40">
                 <div class="flex flex-col items-center justify-center text-center">
                     <h2 class="font-adamina text-2xl md:text-4xl lg:text-[3.25rem] mb-6 md:mb-10 text-[#F5F3EF]"
@@ -336,19 +317,15 @@
                 </div>
             </div>
 
-            <!-- Full Width Horizontal Line -->
             <div class="h-[1px] bg-[#C9A84C] -mx-8"></div>
 
-            <!-- Footer Main Section -->
             <div class="max-w-[1400px] mx-auto w-full relative">
-                <!-- Golden Vertical Line for tablet - exactly center -->
                 <div
                     class="absolute top-0 bottom-0 left-1/2 w-[1px] bg-[#C9A84C] hidden md:block lg:hidden -translate-x-1/2">
                 </div>
 
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-4 md:gap-y-12 md:gap-x-16 lg:gap-x-[calc(16%/11)]">
-                    <!-- Left Side -->
                     <div
                         class="pt-8 pb-2 md:pb-24 flex flex-col justify-between min-h-[auto] md:min-h-[350px] lg:min-h-[420px] lg:col-span-6">
                         <div>
@@ -363,12 +340,10 @@
                         </div>
                     </div>
 
-                    <!-- Vertical line for desktop (Starts at Column 7) -->
                     <div class="hidden lg:block lg:col-start-7 relative">
                         <div class="absolute top-0 bottom-0 left-0 w-[1px] bg-[#C9A84C]"></div>
                     </div>
 
-                    <!-- Right Side -->
                     <div
                         class="pt-2 md:pt-8 pb-12 md:pb-24 flex flex-col justify-between min-h-[auto] md:min-h-[350px] lg:min-h-[420px] lg:col-start-8 lg:col-span-5">
                         <div class="grid grid-cols-4 gap-x-[calc(16%/3)] md:grid-cols-2 md:gap-x-8 lg:gap-x-16">
@@ -417,17 +392,13 @@
         </div>
     </section>
 
-    <!-- Mobile Sidebar Menu -->
     <div id="mobile-menu" class="fixed inset-0 z-[100] pointer-events-none">
-        <!-- Backdrop -->
         <div id="mobile-backdrop"
             class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 pointer-events-auto hidden">
         </div>
 
-        <!-- Sidebar -->
         <div id="mobile-sidebar"
             class="absolute top-0 right-0 h-full w-[85%] max-w-sm bg-[#1A2352] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col pointer-events-auto">
-            <!-- Header (Close Button) -->
             <div class="flex justify-end p-8 border-b border-white/10">
                 <button id="mobile-close-btn" class="text-[#F5F3EF] hover:text-[#CEB171] transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -437,7 +408,6 @@
                 </button>
             </div>
 
-            <!-- Navigation Links -->
             <nav class="flex flex-col gap-2 p-8 text-[#F5F3EF] text-lg">
                 <a href="index.html"
                     class="hover:text-[#CEB171] font-normal border-b border-white/10 pb-4 transition-colors">Home</a>
@@ -453,7 +423,6 @@
         </div>
     </div>
 
-    <!-- Mobile Menu Script -->
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileCloseBtn = document.getElementById('mobile-close-btn');

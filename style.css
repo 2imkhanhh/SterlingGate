@@ -48,11 +48,9 @@ body {
     font-family: 'Adamina', serif;
 }
 
-/* Hiệu ứng sọc dọc dùng cho container giới hạn width */
 .bg-stripes {
-    /* Mặc định trên Mobile (dưới 768px): Ít cột hơn, cột to hơn (4 cột) */
     --cols: 4;
-    --stripe-pct: 21%; /* Tổng màu 84% chia cho 4 cột = 21% mỗi cột */
+    --stripe-pct: 21%; 
     
     --cycle: calc((100% - var(--stripe-pct)) / (var(--cols) - 1));
 
@@ -65,25 +63,21 @@ body {
     background-size: 100% 100%;
 }
 
-/* Tablet (từ 768px trở lên): 6 cột */
 @media (min-width: 768px) {
     .bg-stripes {
         --cols: 6;
-        --stripe-pct: 14%; /* 84% chia cho 6 cột = 14% */
+        --stripe-pct: 14%; 
     }
 }
 
-/* Desktop (từ 1024px trở lên): 12 cột chuẩn nguyên bản */
 @media (min-width: 1024px) {
     .bg-stripes {
         --cols: 12;
-        --stripe-pct: 7%; /* 84% chia cho 12 cột = 7% */
+        --stripe-pct: 7%; 
     }
 }
 
-/* Background cho khối xám */
 .bg-custom-gray {
-    /* Đổi số 50% ở đây để chỉnh độ mờ của RIÊNG màu nền (không làm mờ chữ) */
     --bg-opacity: 70%;
     background-color: rgb(232 232 232 / var(--bg-opacity));
 }
