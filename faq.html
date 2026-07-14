@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Sterling Gate Capital</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Smooth Accordion Transition */
+        .faq-answer {
+            transition: grid-template-rows 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            opacity: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            opacity: 1;
+        }
+
+        .faq-icon {
+            transition: transform 0.4s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Header (Fixed) -->
+    <header id="main-header"
+        class="fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-300 px-8 py-6 md:py-8 bg-transparent text-[#1A2352]">
+        <div class="flex justify-between items-center max-w-[1400px] mx-auto w-full">
+            <div class="flex items-center gap-3">
+                <a href="index.html">
+                    <img id="header-logo" src="images/logo3.png" alt="Sterling Gate Capital Logo"
+                        class="h-12 w-auto object-contain transition-all duration-300">
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex gap-8 text-sm mt-2">
+                <a href="index.html" class="hover:text-gray-600 font-normal transition-colors">Home</a>
+                <a href="about.html" class="hover:text-gray-600 font-normal transition-colors">About</a>
+                <a href="programs.html" class="hover:text-gray-600 font-normal transition-colors">Loan Programs</a>
+                <a href="faq.html" class="text-[#1A2352] font-bold transition-colors">FAQ</a>
+                <a href="#" class="hover:text-gray-600 font-normal transition-colors">Contact</a>
+            </nav>
+
+            <!-- Hamburger Button (Mobile/Tablet) -->
+            <button id="mobile-menu-btn"
+                class="block lg:hidden text-[#1A2352] hover:text-[#CEB171] mt-2 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="3 3 18 18" stroke-width="1.5"
+                    stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section
+        class="bg-[#F5F3EF] text-[#232946] px-8 pt-32 md:pt-48 pb-16 md:pb-24 flex flex-col relative overflow-hidden min-h-screen">
+        <!-- Lớp lưới sọc dọc chỉ nằm trong vùng max-w-[1400px] -->
+        <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
+            <div class="mx-auto w-full max-w-[1400px] h-full bg-stripes"
+                style="background-image: repeating-linear-gradient(90deg, #b8b8b822 0, #b8b8b822 var(--stripe-pct), transparent 0, transparent var(--cycle));">
+            </div>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto w-full flex-1 flex flex-col relative z-10">
+
+            <div class="mb-16 md:mb-24">
+                <h1 class="font-adamina font-normal text-[#1A2352] text-[2.5rem] md:text-5xl lg:text-[4.5rem]"
+                    style="line-height: 1.3">
+                    Frequently<br>Asked Questions
+                </h1>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="flex flex-col border-t border-[#8D91A4]">
+
+                <!-- Item 1 -->
+                <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
+                        <!-- Number -->
+                        <div class="lg:col-span-6 flex justify-start">
+                            <span class="text-[0.95rem] md:text-[1rem] font-medium text-[#000000]">01</span>
+                        </div>
+                        <!-- Question & Answer -->
+                        <div class="lg:col-span-6 flex flex-col relative">
+                            <div class="flex justify-between items-start w-full gap-4">
+                                <h3
+                                    class="font-medium text-[#16171C] text-[1.1rem] md:text-[1.15rem] leading-snug transition-colors">
+                                    What does Sterling Gate Capital do?</h3>
+                                <span
+                                    class="faq-icon text-[#16171C] font-light text-2xl leading-none mt-[-4px]">+</span>
+                            </div>
+
+                            <div class="faq-answer grid" style="grid-template-rows: 0fr;">
+                                <div class="overflow-hidden">
+                                    <p
+                                        class="text-[#16171C]/80 text-[0.95rem] md:text-[1rem] leading-relaxed pt-4 md:pt-6 pr-4 md:pr-12">
+                                        We help you find the right financing for your commercial property. We work with
+                                        a nationwide network of lenders and guide you through the entire process.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
+                        <div class="lg:col-span-6 flex justify-start">
+                            <span class="text-[0.95rem] md:text-[1rem] font-medium text-[#000000]">02</span>
+                        </div>
+                        <div class="lg:col-span-6 flex flex-col relative">
+                            <div class="flex justify-between items-start w-full gap-4">
+                                <h3
+                                    class="font-medium text-[#16171C] text-[1.1rem] md:text-[1.15rem] leading-snug transition-colors">
+                                    What types of properties do you finance?</h3>
+                                <span
+                                    class="faq-icon text-[#16171C] font-light text-2xl leading-none mt-[-4px]">+</span>
+                            </div>
+                            <div class="faq-answer grid" style="grid-template-rows: 0fr;">
+                                <div class="overflow-hidden">
+                                    <p
+                                        class="text-[#16171C]/80 text-[0.95rem] md:text-[1rem] leading-relaxed pt-4 md:pt-6 pr-4 md:pr-12">
+                                        We finance a wide variety of commercial properties including Retail, Centers,
+                                        Hotel, Office, Warehouses, Multi-family, and Industrial.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
+                        <div class="lg:col-span-6 flex justify-start">
+                            <span class="text-[0.95rem] md:text-[1rem] font-medium text-[#000000]">03</span>
+                        </div>
+                        <div class="lg:col-span-6 flex flex-col relative">
+                            <div class="flex justify-between items-start w-full gap-4">
+                                <h3
+                                    class="font-medium text-[#16171C] text-[1.1rem] md:text-[1.15rem] leading-snug transition-colors">
+                                    Do I need tax returns to qualify?</h3>
+                                <span
+                                    class="faq-icon text-[#16171C] font-light text-2xl leading-none mt-[-4px]">+</span>
+                            </div>
+                            <div class="faq-answer grid" style="grid-template-rows: 0fr;">
+                                <div class="overflow-hidden">
+                                    <p
+                                        class="text-[#16171C]/80 text-[0.95rem] md:text-[1rem] leading-relaxed pt-4 md:pt-6 pr-4 md:pr-12">
+                                        Not always. We offer DSCR and Lite Doc loans that do not require full tax
+                                        returns, qualifying based on property cash flow instead.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
+                        <div class="lg:col-span-6 flex justify-start">
+                            <span class="text-[0.95rem] md:text-[1rem] font-medium text-[#000000]">04</span>
+                        </div>
+                        <div class="lg:col-span-6 flex flex-col relative">
+                            <div class="flex justify-between items-start w-full gap-4">
+                                <h3
+                                    class="font-medium text-[#16171C] text-[1.1rem] md:text-[1.15rem] leading-snug transition-colors">
+                                    How fast can I get funded?</h3>
+                                <span
+                                    class="faq-icon text-[#16171C] font-light text-2xl leading-none mt-[-4px]">+</span>
+                            </div>
+                            <div class="faq-answer grid" style="grid-template-rows: 0fr;">
+                                <div class="overflow-hidden">
+                                    <p
+                                        class="text-[#16171C]/80 text-[0.95rem] md:text-[1rem] leading-relaxed pt-4 md:pt-6 pr-4 md:pr-12">
+                                        Funding timelines vary depending on the loan type and the specifics of your
+                                        project, but bridge loans and fix & flip loans can close very quickly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
+                        <div class="lg:col-span-6 flex justify-start">
+                            <span class="text-[0.95rem] md:text-[1rem] font-medium text-[#000000]">05</span>
+                        </div>
+                        <div class="lg:col-span-6 flex flex-col relative">
+                            <div class="flex justify-between items-start w-full gap-4">
+                                <h3
+                                    class="font-medium text-[#16171C] text-[1.1rem] md:text-[1.15rem] leading-snug transition-colors">
+                                    Can I get financing if I live outside the U.S.?</h3>
+                                <span
+                                    class="faq-icon text-[#16171C] font-light text-2xl leading-none mt-[-4px]">+</span>
+                            </div>
+                            <div class="faq-answer grid" style="grid-template-rows: 0fr;">
+                                <div class="overflow-hidden">
+                                    <p
+                                        class="text-[#16171C]/80 text-[0.95rem] md:text-[1rem] leading-relaxed pt-4 md:pt-6 pr-4 md:pr-12">
+                                        Yes. We offer Foreign Investor Loans specifically designed for international
+                                        investors purchasing U.S. real estate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
+                        <div class="lg:col-span-6 flex justify-start">
+                            <span class="text-[0.95rem] md:text-[1rem] font-medium text-[#000000]">06</span>
+                        </div>
+                        <div class="lg:col-span-6 flex flex-col relative">
+                            <div class="flex justify-between items-start w-full gap-4">
+                                <h3
+                                    class="font-medium text-[#16171C] text-[1.1rem] md:text-[1.15rem] leading-snug transition-colors">
+                                    Is there a cost to get started?</h3>
+                                <span
+                                    class="faq-icon text-[#16171C] font-light text-2xl leading-none mt-[-4px]">+</span>
+                            </div>
+                            <div class="faq-answer grid" style="grid-template-rows: 0fr;">
+                                <div class="overflow-hidden">
+                                    <p
+                                        class="text-[#16171C]/80 text-[0.95rem] md:text-[1rem] leading-relaxed pt-4 md:pt-6 pr-4 md:pr-12">
+                                        We offer a free initial consultation to discuss your project and options.
+                                        Specific costs associated with the loan will be transparently discussed before
+                                        proceeding.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="faq-item border-b border-[#8D91A4] group cursor-pointer" onclick="toggleFaq(this)">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-x-[calc(16%/11)] py-8 md:py-10 items-start">
+                        <div class="lg:col-span-6 flex justify-start">
+                            <span class="text-[0.95rem] md:text-[1rem] font-medium text-[#000000]">07</span>
+                        </div>
+                        <div class="lg:col-span-6 flex flex-col relative">
+                            <div class="flex justify-between items-start w-full gap-4">
+                                <h3
+                                    class="font-medium text-[#16171C] text-[1.1rem] md:text-[1.15rem] leading-snug transition-colors">
+                                    How do I get started?</h3>
+                                <span
+                                    class="faq-icon text-[#16171C] font-light text-2xl leading-none mt-[-4px]">+</span>
+                            </div>
+                            <div class="faq-answer grid" style="grid-template-rows: 0fr;">
+                                <div class="overflow-hidden">
+                                    <p
+                                        class="text-[#16171C]/80 text-[0.95rem] md:text-[1rem] leading-relaxed pt-4 md:pt-6 pr-4 md:pr-12">
+                                        Simply call us at 251.888.6868 to discuss your project, and we will walk you
+                                        through your options.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="mt-16 md:mt-32">
+                <div
+                    class="bg-[#CEB171] rounded-sm py-8 md:py-10 px-4 flex flex-col items-center justify-center text-center">
+                    <h2 class="font-adamina text-[#1A2352] text-[1.35rem] md:text-3xl lg:text-[2.5rem] mb-6 md:mb-8 max-w-lg"
+                        style="line-height: 1.6;">
+                        Have More<br>Questions?
+                    </h2>
+                    <button
+                        class="bg-[#1A2352] text-[#F5F3EF] hover:bg-[#CEB171] transition-colors px-6 py-3 text-xs tracking-[0.15em] font-semibold uppercase flex items-center gap-3 rounded-sm shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        251.888.6868
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section
+        class="bg-[#232946] text-[#F5F3EF] px-8 relative overflow-hidden flex flex-col border-t border-[#CEB171]/20">
+        <div class="absolute inset-y-0 left-0 right-0 px-8 pointer-events-none z-0">
+            <div class="mx-auto w-full max-w-[1400px] h-full bg-stripes"></div>
+        </div>
+
+        <div class="relative z-10 flex flex-col w-full flex-1">
+
+            <!-- CTA Section -->
+            <div class="w-full flex justify-center pt-12 pb-10 lg:pt-16 lg:pb-40">
+                <div class="flex flex-col items-center justify-center text-center">
+                    <h2 class="font-adamina text-2xl md:text-4xl lg:text-[3.25rem] mb-6 md:mb-10 text-[#F5F3EF]"
+                        style="line-height: 1.2;">
+                        Investment That<br>Compounds Value
+                    </h2>
+                    <button
+                        class="border border-white/40 hover:bg-white hover:text-[#232946] transition-all duration-300 px-8 py-3 text-xs tracking-[0.15em] uppercase flex items-center gap-2 rounded-sm">
+                        REQUEST PRIVATE CONSULTATION
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Full Width Horizontal Line -->
+            <div class="h-[1px] bg-[#C9A84C] -mx-8"></div>
+
+            <!-- Footer Main Section -->
+            <div class="max-w-[1400px] mx-auto w-full relative">
+                <!-- Golden Vertical Line for tablet - exactly center -->
+                <div
+                    class="absolute top-0 bottom-0 left-1/2 w-[1px] bg-[#C9A84C] hidden md:block lg:hidden -translate-x-1/2">
+                </div>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-4 md:gap-y-12 md:gap-x-16 lg:gap-x-[calc(16%/11)]">
+                    <!-- Left Side -->
+                    <div
+                        class="pt-8 pb-2 md:pb-24 flex flex-col justify-between min-h-[auto] md:min-h-[350px] lg:min-h-[420px] lg:col-span-6">
+                        <div>
+                            <img src="images/logo2.png" alt="Sterling Gate Capital Logo"
+                                class="h-10 lg:h-14 w-auto object-contain">
+                        </div>
+                        <div class="mt-12 md:mt-auto">
+                            <h2 class="font-adamina font-normal text-[1.35rem] md:text-3xl lg:text-[2.5rem] tracking-[0.1em] uppercase text-[#F5F3EF]"
+                                style="line-height: 1.4;">
+                                Sterling Gate<br>Capital
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!-- Vertical line for desktop (Starts at Column 7) -->
+                    <div class="hidden lg:block lg:col-start-7 relative">
+                        <div class="absolute top-0 bottom-0 left-0 w-[1px] bg-[#C9A84C]"></div>
+                    </div>
+
+                    <!-- Right Side -->
+                    <div
+                        class="pt-2 md:pt-8 pb-12 md:pb-24 flex flex-col justify-between min-h-[auto] md:min-h-[350px] lg:min-h-[420px] lg:col-start-8 lg:col-span-5">
+                        <div class="grid grid-cols-4 gap-x-[calc(16%/3)] md:grid-cols-2 md:gap-x-8 lg:gap-x-16">
+                            <div class="col-span-2 md:col-span-1">
+                                <h4 class="font-bold text-[#F5F3EF] mb-3 text-[0.85rem] tracking-wide">Pages</h4>
+                                <ul class="space-y-1.5 text-[0.85rem] text-[#F5F3EF]/70">
+                                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                                    <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                                    <li><a href="programs.html" class="hover:text-white transition-colors">Loan
+                                            Programs</a></li>
+                                    <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                                    <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-span-2 md:col-span-1">
+                                <div class="mb-6">
+                                    <h4 class="font-bold text-[#F5F3EF] mb-1.5 text-[0.85rem] tracking-wide">Email:</h4>
+                                    <a href="mailto:invest@sterlinggatecapital.com"
+                                        class="text-[0.85rem] text-[#F5F3EF]/70 hover:text-white transition-colors">invest@sterlinggatecapital.com</a>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#F5F3EF] mb-1.5 text-[0.85rem] tracking-wide">Phone:</h4>
+                                    <a href="tel:2518886868"
+                                        class="text-[0.85rem] text-[#F5F3EF]/70 hover:text-white transition-colors">251.888.6868</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-24 md:mt-auto flex flex-col items-start gap-10">
+                            <button
+                                class="border border-white/40 hover:bg-white hover:text-[#232946] transition-all duration-300 px-6 py-2.5 text-xs tracking-[0.15em] uppercase flex items-center gap-2 rounded-sm">
+                                PRIVACY POLICY
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </button>
+                            <p class="text-[0.7rem] lg:text-[0.85rem] text-[#F5F3EF] leading-relaxed font-light">
+                                Privacy Policy | Terms of Use © 2026 Sterling Gate Capital LLC.<br>All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Sidebar Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] pointer-events-none">
+        <!-- Backdrop -->
+        <div id="mobile-backdrop"
+            class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 pointer-events-auto hidden">
+        </div>
+
+        <!-- Sidebar -->
+        <div id="mobile-sidebar"
+            class="absolute top-0 right-0 h-full w-[85%] max-w-sm bg-[#1A2352] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col pointer-events-auto">
+            <!-- Header (Close Button) -->
+            <div class="flex justify-end p-8 border-b border-white/10">
+                <button id="mobile-close-btn" class="text-[#F5F3EF] hover:text-[#CEB171] transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex flex-col gap-2 p-8 text-[#F5F3EF] text-lg">
+                <a href="index.html"
+                    class="hover:text-[#CEB171] font-normal border-b border-white/10 pb-4 transition-colors">Home</a>
+                <a href="about.html"
+                    class="hover:text-[#CEB171] font-normal border-b border-white/10 py-4 transition-colors">About</a>
+                <a href="programs.html"
+                    class="hover:text-[#CEB171] font-normal border-b border-white/10 py-4 transition-colors">Loan
+                    Programs</a>
+                <a href="faq.html"
+                    class="hover:text-[#CEB171] font-bold border-b border-white/10 py-4 transition-colors">FAQ</a>
+                <a href="#" class="hover:text-[#CEB171] font-normal py-4 transition-colors">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileBackdrop = document.getElementById('mobile-backdrop');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+
+        function toggleMenu() {
+            const isMenuOpen = !mobileSidebar.classList.contains('translate-x-full');
+
+            if (isMenuOpen) {
+                // Close menu
+                mobileSidebar.classList.add('translate-x-full');
+                mobileBackdrop.classList.remove('opacity-100');
+                mobileBackdrop.classList.add('opacity-0');
+
+                setTimeout(() => {
+                    mobileBackdrop.classList.add('hidden');
+                    mobileMenu.classList.remove('pointer-events-auto');
+                    mobileMenu.classList.add('pointer-events-none');
+                }, 300);
+            } else {
+                // Open menu
+                mobileMenu.classList.remove('pointer-events-none');
+                mobileMenu.classList.add('pointer-events-auto');
+                mobileBackdrop.classList.remove('hidden');
+
+                // Trigger transition
+                setTimeout(() => {
+                    mobileBackdrop.classList.remove('opacity-0');
+                    mobileBackdrop.classList.add('opacity-100');
+                    mobileSidebar.classList.remove('translate-x-full');
+                }, 10);
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileCloseBtn.addEventListener('click', toggleMenu);
+        mobileBackdrop.addEventListener('click', toggleMenu);
+
+        // Header Scroll Effect
+        const header = document.getElementById('main-header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg', 'py-3', 'md:py-3');
+                header.classList.remove('py-6', 'md:py-8', 'bg-transparent');
+            } else {
+                header.classList.add('py-6', 'md:py-8', 'bg-transparent');
+                header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg', 'py-3', 'md:py-3');
+            }
+        });
+
+        // FAQ Accordion Script
+        function toggleFaq(element) {
+            const answer = element.querySelector('.faq-answer');
+            const icon = element.querySelector('.faq-icon');
+            const isOpen = element.classList.contains('active');
+
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').style.gridTemplateRows = '0fr';
+                item.querySelector('.faq-icon').textContent = '+';
+            });
+
+            // If the clicked item was not open, open it
+            if (!isOpen) {
+                element.classList.add('active');
+                answer.style.gridTemplateRows = '1fr';
+                icon.textContent = '−'; // Using a minus sign
+            }
+        }
+    </script>
+
+</body>
+
+</html>
